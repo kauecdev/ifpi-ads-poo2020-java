@@ -32,6 +32,10 @@ public class Banco {
 				break;
 			}
 		}
+		
+		if (c == null) {
+			throw new AplicacaoException("Conta não encontrada");
+		}
 		return c;
 	}
 
@@ -43,6 +47,11 @@ public class Banco {
 				break;
 			}
 		}
+		
+		if (pos == -1) {
+			throw new AplicacaoException("Conta não encontrada");
+		}
+		
 		return pos;
 	}
 
