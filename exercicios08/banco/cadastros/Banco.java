@@ -17,7 +17,7 @@ public class Banco {
 	}
 
 	public void inserir(Conta c) {
-		if (indice > contas.length) {
+		if (indice == contas.length) {
 			throw new AplicacaoException("Número máximo de contas atingido.");
 		}
 		contas[indice] = c;
